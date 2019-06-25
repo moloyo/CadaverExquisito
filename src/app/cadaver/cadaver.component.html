@@ -1,0 +1,16 @@
+<form [formGroup]="cadaver" fxLayout='column' fxLayoutAlign="center center" style="max-width: 500px">
+    <label>{{ previousL}}</label>
+    <mat-form-field class="inputOracion" *ngIf="!esPrimerOracion">
+        <mat-label>Oración anterior</mat-label>
+        <input matInput formControlName="primerOracion">
+    </mat-form-field>
+    <mat-form-field class="inputOracion">
+        <mat-label>{{ esPrimerOracion ? 'Primer oración' : 'Siguente oración' }}</mat-label>
+        <input matInput formControlName="segundaOracion">
+    </mat-form-field>
+    <button button="submit" [disabled]="!cadaver.valid" mat-raised-button color="primary" class="button"
+        (click)="next()">Next</button>
+    <button button="submit" [disabled]="!cadaver.valid" mat-raised-button color="primary" class="button"
+        (click)="finish()">Finish</button>
+    <span *ngIf="esTerminado">{{ cadaverTerminado }}</span>
+</form>

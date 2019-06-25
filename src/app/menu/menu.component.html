@@ -1,0 +1,8 @@
+<mat-toolbar>
+    <span>Cadaver exquisito</span>
+    <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="cleanPage()">Nuevo</button>
+        <button mat-menu-item>Exportar</button>
+    </mat-menu>
+</mat-toolbar>
