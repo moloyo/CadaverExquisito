@@ -1,5 +1,9 @@
 # CadaverExquisito
 
+Una demo muy simple del juego de cadaver exquisito.
+
+¿Why? Becauase f you, that's why
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.2.
 
 ## Development server
